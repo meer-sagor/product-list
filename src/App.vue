@@ -112,8 +112,8 @@ onMounted(async () => {
       </div>
       <div class="text-center">
         <Pagination
-          :totalItems="(products?.total as number)"
-          :itemsPerPage="(products?.limit as number)"
+          :totalItems="(Number(products?.total) as number)"
+          :itemsPerPage="(Number(products?.limit) as number)"
           :maxPagesShown="(products?.limit as number)"
           @click="paginationPageChangeHandler"
           v-model="currentPage"
