@@ -22,8 +22,8 @@ const props = defineProps<Props>()
   column-gap: 10px;
 }
 .paginate-buttons {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   border-radius: 20px;
   cursor: pointer;
   background-color: rgb(242, 242, 242);
@@ -40,5 +40,12 @@ const props = defineProps<Props>()
 }
 .active-page:hover {
   background-color: #22c55e;
+}
+
+@media only screen and (min-width: 425px){
+  .paginate-buttons {
+  height: 40px;
+  width: 40px;
+}
 }
 </style>

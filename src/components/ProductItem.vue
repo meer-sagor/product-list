@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, ref, toRefs } from 'vue'
+import { ref, toRefs } from 'vue'
 import type { IProductItem } from '@/interface/Product'
 import ProductDetails from './ProductDetails.vue'
 import { getProductsItem } from '@/services/API/Product'
@@ -44,7 +44,7 @@ const productDetailsShowHandler = (id: number) => {
     </div>
 
     <div v-if="selectedProductDetailsToggle">
-      <ProductDetails :product="productItem" />
+      <ProductDetails :product="(productItem as IProductItem)" />
     </div>
   </div>
 </template>
